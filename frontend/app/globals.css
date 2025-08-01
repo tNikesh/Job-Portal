@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-open-sans);
+  --font-montserrat: var(--font-montserrat);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-open-sans);
+}
+
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #2563eb;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #2563eb, 0 0 5px #2563eb;
+  opacity: 1.0;
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+#nprogress .spinner {
+  display: none;
+}
+
+#nprogress .bar {
+  transition: width 0.3s ease;
+}
+
+
+/* Styling for the rich text editor container */
+.editor-container {
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 200px;
+  background-color: #f9f9f9;
+}
+
+/* Styling for the toolbar buttons */
+.editor-toolbar button {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.editor-toolbar button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Add custom styling for ordered and unordered lists */
+.DraftEditor-root .public-DraftStyleDefault-block {
+  margin-left: 20px;
+}
+
+ul, ol {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+/* Make the editor container responsive and neat */
+@media (max-width: 768px) {
+  .editor-container {
+    padding: 10px;
+  }
+}
