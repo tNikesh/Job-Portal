@@ -43,7 +43,7 @@ class EmployerJobsSeeder extends Seeder
         
         $skillsList = ['Java', 'PHP', 'Laravel', 'Python', 'React', 'Node.js', 'SQL', 'AWS', 'Docker', 'Kubernetes'];
         
-        for ($i = 1; $i <= 50; $i++) {
+        for ($i = 1; $i <= 20; $i++) {
             $title = $jobTitles[array_rand($jobTitles)];
             $description = $jobDescriptions[array_rand($jobDescriptions)];
         
@@ -52,7 +52,7 @@ class EmployerJobsSeeder extends Seeder
                 ->implode(', ');
         
             DB::table('employer_jobs')->insert([
-                'employer_id' => rand(1, 2), // random employer_id 1 or 2
+                'employer_id' => 1, // random employer_id 1 or 2
                 'title' => $title,
                 'description' => $description,
                 'experience_required' => rand(1, 10) . ' years',

@@ -204,7 +204,7 @@ export default function page() {
 
       <button
       onClick={() => setShowModal(true)}
-      className="px-5 py-1 mt-4 bg-blue-600 cursor-pointer text-white rounded-md hover:bg-blue-700"
+      className="px-5 py-1 mt-4 bg-red-600 cursor-pointer text-white rounded-md hover:bg-red-700"
       >
       Apply Now
       </button>

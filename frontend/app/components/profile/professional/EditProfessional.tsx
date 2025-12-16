@@ -150,9 +150,9 @@ const EditProfessional = ({ showModal, setShowModal }: Props) => {
             errors.skills ? "border-red-500" : "border-gray-400"
           }`}
         />
-        {errors.interested_industries && (
+        {errors.skills && (
           <p className="text-red-500 text-sm">
-            {errors.interested_industries.message}
+            {errors.skills.message}
           </p>
         )}
       </div>

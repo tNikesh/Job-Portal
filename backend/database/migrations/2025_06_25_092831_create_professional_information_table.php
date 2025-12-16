@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->unique();
             $table->string('skills')->nullable();
-            $table->string('intrested_industries')->nullable();
+            $table->string('interested_industries')->nullable();
             $table->json('preferred_jobs')->nullable();
             $table->string('employment_status');
             $table->timestamps();

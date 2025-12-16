@@ -39,7 +39,7 @@ export default function EmployerProfileForm() {
     try {
       const res = await api.post("/employer/profile/detail", data);
       toast.success("Profile saved successfully");
-      router.push('/user/employer');
+      router.push('/user/employer/profile');
     } catch (err: any) {
       const res = err.response;
       if (!res) {
